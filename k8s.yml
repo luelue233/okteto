@@ -16,7 +16,7 @@ spec:
       - name: internet
         image: okteto.dev/internet:latest
         ports:
-        - containerPort: 8888
+        - containerPort: 443
         
 ---
     
@@ -28,6 +28,6 @@ spec:
   type: LoadBalancer 
   ports:
     - name: http
-      port: 8888
+      port: 443
   selector:
     app: internet
